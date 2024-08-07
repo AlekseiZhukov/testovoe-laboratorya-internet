@@ -1,0 +1,12 @@
+.question-icon {
+  position: relative;
+  top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  &.open {
+    transform: rotate(45deg);
+    transition: all 0.3s;
+  }
+}

@@ -1,0 +1,72 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+
+.third {
+  padding-bottom: 80px;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .third-info {
+      width: 49%;
+      .third-info-title {
+        margin-bottom: 18px;
+      }
+
+      .third-info-text {
+        @include body16;
+        margin-bottom: 40px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .third-image {
+      width:49%;
+      img {
+        vertical-align: middle;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 748px) {
+  .third {
+    padding-bottom: 56px;
+
+    .container {
+
+      flex-direction: column;
+      justify-content: space-between;
+
+      .third-info {
+        order: 2;
+        text-align: center;
+      }
+
+      .third-image {
+        order: 1;
+        margin-bottom: 7px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 520px) {
+  .third {
+    .container {
+      .third-info {
+        width: 100%;
+      }
+      .third-image {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+

@@ -1,0 +1,91 @@
+<section class="form" id="form">
+  <div class="container">
+    <h2 class="form-title">Отправь форму</h2>
+    <div class="form-content">
+      <form [formGroup]="form">
+        <div class="inputs-wrap">
+          <div class="input">
+            <input
+              type="text"
+              class="input"
+              name="name"
+              placeholder="Имя"
+              formControlName="name"
+              [ngStyle]="{'border-color': name?.invalid && (name?.dirty || name?.touched) ? 'red': ''}"
+              required
+              autocomplete="off">
+            <span class="input-valid-icon" *ngIf="name?.valid && (name?.dirty || name?.touched)">
+              <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                   xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path id="Vector"
+                        d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.51 20 20 15.52 20 10C20 4.48 15.51 0 10 0ZM8 15L3 10L4.41 8.59L8 12.17L15.58 4.57L17 6L8 15Z"
+                        fill="#25CD82" fill-opacity="1.000000" fill-rule="nonzero"/>
+              </svg>
+            </span>
+            <span class="input-valid-icon" *ngIf="name?.invalid && (name?.dirty || name?.touched)">
+              <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path id="Vector" d="M10 0C4.47 0 0 4.46 0 10C0 15.53 4.47 20 10 20C15.52 20 20 15.53 20 10C20 4.46 15.52 0 10 0ZM15 13.59L13.58 15L10 11.41L6.41 15L5 13.59L8.58 10L5 6.41L6.41 5L10 8.59L13.58 5L15 6.41L11.41 10L15 13.59Z" fill="#F13636" fill-opacity="1.000000" fill-rule="nonzero"/>
+              </svg>
+            </span>
+            <div *ngIf="name?.invalid && (name?.dirty || name?.touched)">
+              <div class="form-text-error" *ngIf="name?.errors?.['required']">
+                Заполните поле
+              </div>
+              <div class="form-text-error" *ngIf="name?.errors?.['pattern']">
+                Имя должно быть на русском языке
+              </div>
+            </div>
+          </div>
+
+          <div class="input">
+            <input
+              type="tel"
+              prefix="+7"
+              mask="(000) 000 00 00"
+              class="input"
+              name="phone"
+              placeholder="Телефон"
+              formControlName="phone"
+              [ngStyle]="{'border-color': phone?.invalid && (phone?.dirty || phone?.touched) ? 'red': ''}"
+              required
+              autocomplete="off">
+            <span class="input-valid-icon" *ngIf="phone?.valid && (phone?.dirty || phone?.touched)">
+              <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                   xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path id="Vector"
+                        d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.51 20 20 15.52 20 10C20 4.48 15.51 0 10 0ZM8 15L3 10L4.41 8.59L8 12.17L15.58 4.57L17 6L8 15Z"
+                        fill="#25CD82" fill-opacity="1.000000" fill-rule="nonzero"/>
+              </svg>
+            </span>
+            <span class="input-valid-icon" *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)">
+              <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path id="Vector" d="M10 0C4.47 0 0 4.46 0 10C0 15.53 4.47 20 10 20C15.52 20 20 15.53 20 10C20 4.46 15.52 0 10 0ZM15 13.59L13.58 15L10 11.41L6.41 15L5 13.59L8.58 10L5 6.41L6.41 5L10 8.59L13.58 5L15 6.41L11.41 10L15 13.59Z" fill="#F13636" fill-opacity="1.000000" fill-rule="nonzero"/>
+              </svg>
+            </span>
+            <div *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)">
+              <div class="form-text-error" *ngIf="phone?.errors?.['required']">
+                Заполните поле
+              </div>
+              <div class="form-text-error">
+                Номер должен быть в формате ххх ххх хх хх
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inputs-wrap">
+          <div class="checkbox">
+            <input type="checkbox" id="agree" formControlName="agree">
+            <label for="agree">Согласен, отказываюсь</label>
+          </div>
+          <button class="button" [disabled]="form.invalid" (click)="submitForm()" type="submit">Отправить</button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</section>
+
+
+
+

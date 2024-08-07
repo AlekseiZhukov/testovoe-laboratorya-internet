@@ -1,0 +1,150 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+
+.form {
+  padding: 80px 0;
+
+  .container {
+    .form-title {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+
+    form {
+      max-width: 800px;
+      margin: 0 auto;
+
+      .inputs-wrap {
+        display: flex;
+        justify-content: space-between;
+
+        .input {
+          position: relative;
+          width: 47%;
+          margin-bottom: 30px;
+
+          input {
+            @include body18;
+            margin-bottom: 5px;
+            padding: 16px;
+            box-sizing: border-box;
+            width: 100%;
+            outline: none;
+            border: 2px solid rgb(246, 248, 250);
+            border-radius: 4px;
+            background: rgb(246, 248, 250);
+
+            &::placeholder {
+              @include body18;
+              color: rgb(94, 100, 106);
+            }
+          }
+
+          .input-valid-icon {
+            position: absolute;
+            top: 22px;
+            right: 22px;
+          }
+
+          .form-text-error {
+            @include body12;
+            color: red;
+          }
+        }
+
+        .checkbox {
+          input {
+            position: absolute;
+            opacity: 0;
+            left: -9999px;
+
+            &:checked + label,
+            &:not(:checked) + label {
+              position: relative;
+              cursor: pointer;
+              margin-left: 40px;
+            }
+
+            &:checked + label::before {
+              border: 2px solid rgb(42, 108, 234);
+              background: rgb(42, 108, 234);
+            }
+
+            &:checked + label::after {
+              opacity: 1;
+            }
+          }
+
+          label {
+            @include body16;
+            position: relative;
+
+            &::before {
+              content: '';
+              position: absolute;
+              width: 24px;
+              height: 24px;
+              box-sizing: border-box;
+              border: 2px solid rgb(194, 200, 205);
+              border-radius: 4px;
+              background: rgb(255, 255, 255);
+              top: -5px;
+              left: -40px;
+            }
+
+            &::after {
+              content: url("data:image/svg+xml,%3Csvg width='16.000000' height='12.000065' viewBox='0 0 16 12.0001' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath id='Vector' d='M0 6.51L5.47 12L16 1.48L14.48 0L5.47 8.99L1.48 5.01L0 6.51Z' fill='%23FFFFFF' fill-opacity='1.000000' fill-rule='nonzero'/%3E%3C/svg%3E%0A");
+              position: absolute;
+              top: -5px;
+              left: -36px;
+              opacity: 0;
+            }
+          }
+        }
+
+        button.button {
+          width: 47%;
+
+          &:disabled {
+            background: gray;
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .form {
+    padding: 56px 0;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .form {
+    .container {
+      form {
+        .inputs-wrap {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .input {
+            width: 100%;
+            margin-bottom: 20px;
+          }
+
+          .checkbox {
+            margin-bottom: 20px;
+          }
+          button.button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+

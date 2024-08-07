@@ -1,0 +1,10 @@
+<section class="questions" id="questions">
+  <div class="container">
+    <h2 class="questions-title">Вопросы и ответы</h2>
+    <div class="questions-items">
+      <mat-accordion [hideToggle]="true" >
+        <accordion-item [question]="question" *ngFor="let question of questions"></accordion-item>
+      </mat-accordion>
+    </div>
+  </div>
+</section>

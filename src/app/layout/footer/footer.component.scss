@@ -1,0 +1,13 @@
+@import "../../../assets/styles/mixins";
+
+.footer {
+  padding: 28px 0;
+  border-top: 1px solid rgb(236, 239, 242);
+  box-sizing: border-box;
+  .container {
+    .footer-content {
+      @include body18;
+      text-align: center;
+    }
+  }
+}
