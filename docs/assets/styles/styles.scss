@@ -1,0 +1,100 @@
+/* You can add global styles to this file, and also import other style files */
+@import "global";
+@import "fonts";
+@import "mixins";
+@import "variables";
+
+.owl-theme .owl-nav.disabled+.owl-dots {
+  margin-top: 20px;
+}
+
+.owl-theme .owl-dots .owl-dot {
+
+  margin-right: 17px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+  span {
+    width: 8px;
+    height: 8px;
+    background-color: rgb(194, 200, 205);
+    margin: 0;
+  }
+  &.active, &:hover {
+    span {
+      background: rgb(42, 108, 234);
+    }
+
+  }
+}
+
+
+
+.mat-expansion-panel .mat-expansion-panel-header.cdk-keyboard-focused:not([aria-disabled=true]),
+.mat-expansion-panel .mat-expansion-panel-header.cdk-program-focused:not([aria-disabled=true]),
+.mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled=true]) {
+  background: unset;
+}
+.mat-expansion-panel-header {
+  @include body18-bold;
+  //padding: 16px 0 !important;
+  height: fit-content !important;
+  &:hover {
+    span .mat-expansion-panel-header-title {
+      color: rgb(42, 108, 234);
+      .question-icon {
+        svg {
+          g path {
+            fill: rgb(42, 108, 234);
+          }
+          circle {
+            stroke: rgb(42, 108, 234);
+          }
+        }
+      }
+    }
+
+  }
+}
+.mat-expansion-panel-header-title {
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 0 !important;
+  padding: 16px 0;
+
+  span {
+    margin-right: 17px;
+  }
+}
+
+.mat-expansion-panel:not([class*=mat-elevation-z]) {
+  border-top: 1px solid rgb(236, 239, 242);
+  border-radius: 0 !important;
+   box-shadow: none;
+  box-sizing: border-box;
+
+}
+
+.mat-expansion-panel-body {
+  @include body18;
+  color: rgb(94, 100, 106) !important;
+  padding: 0 48px 0 0 !important;
+}
+@media screen and (max-width: 521px) {
+  .mat-expansion-panel-header {
+    @include body18-bold;
+    padding: 30px 0 !important;
+    .mat-expansion-panel-header-title {
+      align-items: baseline;
+      padding: 0;
+    }
+
+  }
+}
+
+
+
+/*
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }*/

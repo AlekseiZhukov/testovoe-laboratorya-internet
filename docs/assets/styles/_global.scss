@@ -1,0 +1,89 @@
+@import "variables";
+@import "mixins";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  color: $main-color-text;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+h1 {
+  @include headline1;
+}
+h2 {
+  @include headline2;
+}
+h3 {
+  @include headline3;
+}
+h4 {
+  @include headline4;
+}
+h5 {
+  @include headline5;
+}
+h6 {
+  @include headline6;
+}
+
+.button {
+  @include button;
+}
+
+.button-default {
+  @include button;
+  background-color: $default-button-background;
+  color: $main-color-text;
+  &:hover {
+    background-color: $default-button-hover-background;
+    border: 1px solid rgb(194, 200, 205);
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+@media screen and (max-width: 1215px) {
+
+
+
+}
+@media screen and (max-width: 768px) {
+  h1 {
+    @include headline3;
+  }
+  h2 {
+    @include headline4;
+  }
+  h3 {
+    @include headline5;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  h1 {
+    @include headline4;
+  }
+}
+@media screen and (max-width: 320px) {
+  h1 {
+    @include headline4;
+  }
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+

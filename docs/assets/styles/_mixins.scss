@@ -1,0 +1,134 @@
+@import "variables";
+
+@mixin headline1 {
+  font-family: $main-font;
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 64px;
+  color: $main-color-text;
+  margin: 0;
+  padding: 0;
+}
+@mixin headline2 {
+  font-family: $main-font;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 56px;
+  color: $main-color-text;
+  margin: 0;
+  padding: 0;
+}
+@mixin headline3 {
+  font-family: $main-font;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  color: $main-color-text;
+  margin: 0;
+  padding: 0;
+}
+@mixin headline4 {
+  font-family: $main-font;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  color: $main-color-text;
+  margin: 0;
+  padding: 0;
+}
+@mixin headline5 {
+  font-family: $main-font;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  color: $main-color-text;
+  margin: 0;
+  padding: 0;
+}
+@mixin headline6 {
+  font-family: $main-font;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: $main-color-text;
+  margin: 0;
+  padding: 0;
+}
+@mixin body18 {
+  font-family: $main-font;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  color: $main-color-text;
+}
+@mixin body16 {
+  font-family: $main-font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: $main-color-text;
+}
+@mixin body14 {
+  font-family: $main-font;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $main-color-text;
+}
+@mixin body12 {
+  font-family: $main-font;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: $main-color-text;
+}
+@mixin body12-bold {
+  font-family: $main-font;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  color: $main-color-text;
+}
+@mixin body14-bold {
+  font-family: $main-font;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  color: $main-color-text;
+}
+@mixin body16-bold {
+  font-family: $main-font;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+  color: $main-color-text;
+}
+@mixin body18-bold {
+  font-family: $main-font;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 32px;
+  color: $main-color-text;
+}
+
+@mixin button {
+  width: 147px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: $primary-button-background;
+  color: white;
+  font-family: 'Graphik', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0;
+
+  &:hover {
+    background-color: $primary-button-hover-background;
+  }
+}
